@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0072bc">
+    <title>OS Technology Nepal | IT Hardware, Networking &amp; AMC Support</title>
+    <meta name="description" content="OS Technology supplies IT hardware and delivers server setup, network planning, telephony solutions, technical training, and AMC support for healthcare, hospitality, and commercial organizations in Nepal.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="OS Technology">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_NP">
+    <meta property="og:site_name" content="OS Technology">
+    <meta property="og:title" content="OS Technology Nepal | IT Hardware, Networks & AMC Support">
+    <meta property="og:description" content="IT hardware sales, server setup, network planning, telephony solutions, technical training, and AMC support for organizations in Nepal.">
+    <meta property="og:url" content="__SITE_URL__/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="OS Technology Nepal | IT Hardware & IT Services">
+    <meta name="twitter:description" content="Hardware supply, networking, servers, telephony, training, and AMC support for businesses in Nepal.">
+    <link rel="canonical" href="__SITE_URL__/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ComputerStore",
+        "name": "OS Technology",
+        "description": "IT hardware supplier and technology services company in Nepal, providing hardware sales, server setup and configuration, network planning and solutions, telephony, technical training, and annual maintenance contract support.",
+        "url": "__SITE_URL__/",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Nepal"
+        },
+        "knowsAbout": [
+          "IT hardware sales",
+          "Server installation and configuration",
+          "Computer networking and network planning",
+          "Business telephony solutions",
+          "IT infrastructure training",
+          "Annual maintenance contracts",
+          "Healthcare IT support",
+          "Hospitality IT support"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "IT hardware and technology services",
+          "itemListElement": [
+            {"@type": "OfferCatalog", "name": "IT hardware and equipment supply"},
+            {"@type": "OfferCatalog", "name": "Server setup and network solutions"},
+            {"@type": "OfferCatalog", "name": "Telephony solutions and IT training"},
+            {"@type": "OfferCatalog", "name": "Annual maintenance contract support"}
+          ]
+        }
+      }
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+        --brand-blue: #0072bc;
+        --brand-blue-dark: #005b96;
+        --brand-blue-soft: #e8f3fa;
+        --brand-orange: #f47920;
+        --brand-orange-dark: #a74400;
+        --brand-orange-soft: #fff0e5;
+        --ink: #142a38;
+        --muted: #647584;
+        --paper: #f6f9fc;
+        --dark: #09283d;
+        --line: #e2ebf1;
+        --font: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --display: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+      body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--font); -webkit-font-smoothing: antialiased; }
+      a { color: inherit; text-decoration: none; }
+      button, input, textarea { font: inherit; }
+      button, a { -webkit-tap-highlight-color: transparent; }
+      .wrap { width: min(1180px, calc(100% - 56px)); margin-inline: auto; }
+      .eyebrow { display: flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+      .eyebrow::before { width: 7px; height: 7px; border-radius: 50%; background: var(--brand-orange); content: ""; }
+      .section-heading { max-width: 650px; margin: 14px 0 0; font: 600 clamp(34px, 4.5vw, 54px)/1.1 var(--display); letter-spacing: -.055em; }
+      .section-copy { max-width: 520px; color: var(--muted); font-size: 15px; line-height: 1.8; }
+      .arrow { display: inline-flex; width: 38px; height: 38px; align-items: center; justify-content: center; border: 1px solid currentColor; border-radius: 50%; transition: transform .2s, background .2s; }
+      a:hover .arrow { transform: translate(3px, -3px); background: var(--brand-orange); }
+
+      .site-header { position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgba(0,114,188,.1); background: rgba(246,249,252,.92); backdrop-filter: blur(16px); }
+      .nav { display: flex; min-height: 76px; align-items: center; justify-content: space-between; }
+      .brand { display: inline-flex; align-items: center; gap: 11px; font: 800 17px var(--display); letter-spacing: -.06em; }
+      .brand-mark { display: grid; width: 34px; height: 34px; place-items: center; border-bottom: 3px solid var(--brand-orange); border-radius: 10px; background: var(--brand-blue); color: #fff; font: 800 14px var(--display); letter-spacing: -.08em; }
+      .nav-links { display: flex; align-items: center; gap: 35px; color: #516777; font-size: 13px; font-weight: 600; }
+      .nav-links a:hover { color: var(--ink); }
+      .nav-cta { display: inline-flex; align-items: center; gap: 10px; padding: 12px 17px; border-radius: 6px; background: var(--brand-blue); color: #fff; font-size: 12px; font-weight: 700; transition: background .2s; }
+      .nav-cta:hover { background: var(--brand-blue-dark); }
+      .menu-toggle { display: none; }
+      .menu-toggle span { position: absolute; left: 10px; width: 22px; height: 2px; border-radius: 2px; background: currentColor; transition: top .22s ease, transform .22s ease, opacity .16s ease, width .22s ease; }
+
+      .hero { position: relative; overflow: hidden; padding: 88px 0 92px; background: var(--paper); }
+      .hero-grid { display: grid; grid-template-columns: 1.03fr .97fr; align-items: center; gap: 35px; }
+      .hero-copy { position: relative; z-index: 2; }
+      .hero .eyebrow { margin-bottom: 22px; color: #435d70; }
+      h1 { max-width: 650px; margin: 0; font: 600 clamp(56px, 7.5vw, 91px)/.99 var(--display); letter-spacing: -.082em; }
+      h1 span { color: var(--brand-orange); }
+      .hero-lede { max-width: 460px; margin: 23px 0 0; color: #586d7d; font-size: 16px; line-height: 1.8; }
+      .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 31px; }
+      .button-primary { display: inline-flex; align-items: center; gap: 13px; padding: 15px 19px; border-radius: 5px; background: var(--brand-blue); color: white; font-size: 13px; font-weight: 700; }
+      .button-primary:hover { background: var(--brand-blue-dark); }
+      .button-primary .arrow { width: 25px; height: 25px; border-color: rgba(255,255,255,.35); }
+      .button-primary:hover .arrow { color: var(--brand-blue-dark); }
+      .text-link { display: inline-flex; align-items: center; gap: 8px; color: #36566d; font-size: 13px; font-weight: 700; }
+      .hero-art { position: relative; min-height: 450px; }
+      .art-panel { position: absolute; inset: 14px 7px 10px 24px; overflow: hidden; border: 1px solid rgba(0,114,188,.08); border-radius: 8px 8px 90px 8px; background: radial-gradient(ellipse at 52% 47%, #1a4259 0, #102d40 48%, #092133 100%); }
+      .art-panel::before, .art-panel::after { position: absolute; top: 50%; left: 50%; border: 1px solid rgba(0,114,188,.12); border-radius: 50%; content: ""; transform: translate(-50%, -50%); }
+      .art-panel::before { width: 390px; height: 390px; border-color: rgba(133,197,225,.12); }
+      .art-panel::after { width: 300px; height: 300px; border-color: rgba(244,121,32,.18); }
+      .network-visual { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; }
+      .switch-halo { fill: none; stroke: #78b9d8; stroke-dasharray: 2 10; stroke-linecap: round; stroke-width: 1.5; opacity: .65; animation: halo-rotate 32s linear infinite; transform-box: fill-box; transform-origin: center; }
+      .switch-shadow { fill: #020b11; opacity: .55; filter: blur(13px); }
+      .switch-chassis { fill: url(#switch-face); stroke: #6b8794; stroke-width: 1.5; }
+      .switch-top { fill: url(#switch-top); stroke: #6b8794; stroke-width: 1.5; }
+      .switch-side { fill: #102430; stroke: #637984; stroke-width: 1.5; }
+      .switch-edge { fill: none; stroke: rgba(226,241,247,.45); stroke-width: 1; }
+      .switch-label { fill: #d5e0e5; font: 700 9px ui-sans-serif, system-ui, sans-serif; letter-spacing: 1.5px; }
+      .switch-model { fill: #93aab6; font: 600 6px ui-sans-serif, system-ui, sans-serif; letter-spacing: 1px; }
+      .switch-port-frame { fill: #07131b; stroke: #748792; stroke-width: 1.2; }
+      .switch-port-inner { fill: #030b10; stroke: #263d49; stroke-width: 1; }
+      .switch-pin { fill: #89a1ac; }
+      .switch-led { fill: #58df9b; filter: url(#led-glow); animation: led-blink 1.8s steps(2, end) infinite; }
+      .switch-led.orange { fill: #ff9a4f; animation-duration: 2.4s; }
+      .switch-led.dim { animation-delay: .5s; }
+      .switch-vent { fill: #506975; }
+      .switch-screw { fill: #08131a; stroke: #899ba4; stroke-width: 1; }
+      .switch-power { fill: #58df9b; filter: url(#led-glow); animation: led-blink 3s steps(2, end) infinite; }
+      @keyframes halo-rotate { to { transform: rotate(360deg); } }
+      @keyframes led-blink { 50% { opacity: .3; } }
+      .floating-card { position: absolute; z-index: 2; display: flex; align-items: center; gap: 12px; padding: 13px 15px; border: 1px solid rgba(0,76,124,.1); border-radius: 7px; background: rgba(255,255,255,.96); box-shadow: 0 12px 35px rgba(9,40,61,.12); }
+      .floating-card.top { top: 43px; left: 0; }
+      .floating-card.bottom { right: 0; bottom: 40px; }
+      .card-icon { display: grid; width: 34px; height: 34px; flex: none; place-items: center; border-radius: 5px; background: var(--brand-orange-soft); color: var(--brand-orange-dark); font-size: 16px; }
+      .floating-card strong { display: block; font-size: 12px; }
+      .floating-card small { display: block; margin-top: 3px; color: #647584; font-size: 10px; }
+      .hero-note { display: flex; align-items: center; gap: 9px; margin-top: 48px; color: #657887; font-size: 11px; }
+      .note-line { width: 36px; height: 1px; background: #a7bdcc; }
+
+      .trust-strip { border-block: 1px solid var(--line); background: #fff; }
+      .trust-inner { display: flex; min-height: 78px; align-items: center; justify-content: space-between; gap: 25px; }
+      .trust-title { color: #647a8b; font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+      .trust-tags { display: flex; flex-wrap: wrap; gap: 12px; }
+      .trust-tags span { padding: 9px 13px; border: 1px solid #e2ebf1; border-radius: 3px; color: #36566d; font-size: 11px; font-weight: 600; }
+
+      .services { padding: 105px 0 110px; }
+      .services-top { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 43px; }
+      .services-top .section-copy { margin-bottom: 4px; }
+      .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+      .service-card { display: flex; min-height: 255px; flex-direction: column; padding: 24px; border: 1px solid var(--line); border-radius: 6px; background: #fff; transition: transform .2s, box-shadow .2s; }
+      .service-card:hover { transform: translateY(-4px); box-shadow: 0 16px 35px rgba(0,76,124,.1); }
+      .service-number { color: #6c8494; font-size: 11px; font-weight: 700; }
+      .service-icon { display: grid; width: 43px; height: 43px; margin: 20px 0 19px; place-items: center; border-radius: 6px; background: var(--brand-blue-soft); color: var(--brand-blue); }
+      .service-icon svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.6; }
+      .service-card h3 { margin: 0; font: 700 17px var(--display); letter-spacing: -.04em; }
+      .service-card p { margin: 9px 0 0; color: #647584; font-size: 12px; line-height: 1.65; }
+
+      .approach { padding: 95px 0 100px; background: var(--dark); color: #f5f7ef; }
+      .approach-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; }
+      .approach .eyebrow { color: #bdc5b7; }
+      .approach .section-heading { max-width: 430px; }
+      .approach .section-copy { color: #b3c3cf; }
+      .approach-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 19px; color: #ff9a4f; font-size: 13px; font-weight: 700; }
+      .steps { border-top: 1px solid #294961; }
+      .step { display: grid; grid-template-columns: 48px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid #294961; }
+      .step-number { padding-top: 2px; color: #ff9a4f; font-size: 11px; font-weight: 700; }
+      .step h3 { margin: 0; font: 600 18px var(--display); letter-spacing: -.04em; }
+      .step p { max-width: 430px; margin: 8px 0 0; color: #b3c3cf; font-size: 12px; line-height: 1.75; }
+
+      .local { padding: 104px 0; }
+      .local-card { display: grid; grid-template-columns: 1.1fr .9fr; gap: 60px; padding: 54px 58px; border-radius: 8px; background: #e7f2f9; }
+      .local-card .section-heading { font-size: clamp(36px, 4.7vw, 53px); }
+      .local-card .section-copy { max-width: 470px; color: #526b7c; }
+      .local-points { display: grid; align-content: center; gap: 0; }
+      .local-point { display: flex; align-items: center; gap: 14px; padding: 17px 0; border-bottom: 1px solid rgba(0,76,124,.16); font-size: 13px; font-weight: 600; }
+      .local-point:last-child { border-bottom: 0; }
+      .check { display: grid; width: 24px; height: 24px; flex: none; place-items: center; border-radius: 50%; background: #ffdec6; color: #994000; font-size: 12px; }
+
+      .contact { padding: 100px 0 105px; background: #fff; }
+      .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; }
+      .contact .section-heading { max-width: 490px; }
+      .contact .section-copy { margin-top: 19px; }
+      .contact-detail { display: flex; align-items: center; gap: 11px; margin-top: 28px; color: #526b7c; font-size: 12px; }
+      .contact-detail .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--brand-orange); }
+      .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-content: start; }
+      .field { display: grid; gap: 8px; }
+      .field.full { grid-column: 1 / -1; }
+      .field label { color: #435d70; font-size: 11px; font-weight: 700; }
+      .field input, .field textarea, .field select { width: 100%; padding: 13px 14px; border: 1px solid #dce7ee; border-radius: 4px; outline: 0; background: #fbfdff; color: var(--ink); font-size: 13px; }
+      .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--brand-blue); box-shadow: 0 0 0 3px rgba(0,114,188,.14); }
+      .field textarea { min-height: 110px; resize: vertical; }
+      .form-foot { display: flex; grid-column: 1 / -1; align-items: center; justify-content: space-between; gap: 15px; margin-top: 3px; }
+      .form-foot small { max-width: 255px; color: #647a8b; font-size: 10px; line-height: 1.6; }
+      .form-submit { display: inline-flex; align-items: center; gap: 12px; padding: 14px 18px; border: 0; border-radius: 4px; background: var(--brand-blue); color: #fff; cursor: pointer; font-size: 12px; font-weight: 700; }
+      .form-submit:hover { background: var(--brand-blue-dark); }
+      .form-status { grid-column: 1 / -1; min-height: 18px; margin: 0; color: #005b96; font-size: 12px; }
+
+      .footer { padding: 28px 0; background: var(--dark); color: #d5e0e7; }
+      .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+      .footer .brand { color: #f5f7ef; font-size: 14px; }
+      .footer .brand-mark { width: 29px; height: 29px; background: var(--brand-blue); }
+      .footer p { margin: 0; color: #b3c3cf; font-size: 10px; }
+      .footer-links { display: flex; gap: 20px; font-size: 11px; }
+      .footer-links a:hover { color: #ff9a4f; }
+
+      .whatsapp-float { position: fixed; z-index: 25; right: 24px; bottom: max(24px, env(safe-area-inset-bottom)); display: grid; width: 60px; height: 60px; place-items: center; border: 2px solid #fff; border-radius: 50%; background: #16a34a; color: #fff; box-shadow: 0 7px 22px rgba(9,40,61,.25); transition: transform .2s, background .2s, box-shadow .2s; }
+      .whatsapp-float::before { position: absolute; inset: -5px; border: 1px solid rgba(22,163,74,.35); border-radius: 50%; content: ""; animation: whatsapp-pulse 2.8s ease-out infinite; }
+      .whatsapp-float:hover { transform: translateY(-3px) scale(1.04); background: #12843e; box-shadow: 0 10px 28px rgba(9,40,61,.3); }
+      .whatsapp-float:focus-visible { outline: 3px solid var(--brand-orange); outline-offset: 4px; }
+      .whatsapp-float svg { position: relative; z-index: 1; width: 31px; height: 31px; }
+      .whatsapp-label { position: absolute; right: 69px; padding: 9px 12px; border: 1px solid rgba(0,76,124,.08); border-radius: 5px; background: #fff; color: var(--ink); font-size: 12px; font-weight: 700; white-space: nowrap; box-shadow: 0 4px 14px rgba(9,40,61,.1); opacity: 0; transform: translateX(5px); transition: opacity .2s, transform .2s; pointer-events: none; }
+      .whatsapp-float:hover .whatsapp-label, .whatsapp-float:focus-visible .whatsapp-label { opacity: 1; transform: translateX(0); }
+      @keyframes whatsapp-pulse { 0% { opacity: .7; transform: scale(.85); } 75%, 100% { opacity: 0; transform: scale(1.45); } }
+
+      @media (max-width: 900px) {
+        .hero { padding: 68px 0 75px; }
+        .hero-grid { grid-template-columns: 1fr .85fr; gap: 10px; }
+        .hero-art { min-height: 370px; }
+        .art-panel { inset: 20px 0 15px 15px; }
+        .sun { width: 135px; height: 135px; }
+        .art-panel::before { width: 235px; height: 235px; }
+        .art-panel::after { width: 175px; height: 175px; }
+        .service-grid { grid-template-columns: repeat(2, 1fr); }
+        .approach-grid { gap: 55px; }
+        .local-card { gap: 35px; padding: 42px; }
+        .contact-grid { gap: 45px; }
+      }
+      @media (max-width: 650px) {
+        .wrap { width: min(100% - 36px, 520px); }
+        .nav { min-height: 66px; }
+        .menu-toggle { position: relative; display: grid; width: 44px; height: 44px; flex: none; place-items: center; padding: 0; border: 1px solid rgba(0,114,188,.12); border-radius: 8px; background: #fff; color: var(--brand-blue); cursor: pointer; }
+        .menu-toggle:hover { background: var(--brand-blue-soft); }
+        .menu-toggle:focus-visible { outline: 3px solid var(--brand-orange); outline-offset: 3px; }
+        .menu-toggle span:nth-child(1) { top: 14px; }
+        .menu-toggle span:nth-child(2) { top: 21px; }
+        .menu-toggle span:nth-child(3) { top: 28px; }
+        .menu-toggle[aria-expanded="true"] span:nth-child(1) { top: 21px; transform: rotate(45deg); }
+        .menu-toggle[aria-expanded="true"] span:nth-child(2) { width: 0; opacity: 0; }
+        .menu-toggle[aria-expanded="true"] span:nth-child(3) { top: 21px; transform: rotate(-45deg); }
+        .nav-cta { margin-left: auto; margin-right: 13px; padding: 10px 12px; font-size: 11px; }
+        .nav-links { position: absolute; top: 65px; right: 0; left: 0; display: flex; max-height: 0; flex-direction: column; align-items: stretch; gap: 0; overflow: hidden; padding: 0 18px; border-bottom: 0 solid var(--line); background: var(--paper); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: max-height .28s ease, opacity .2s ease, transform .28s ease, padding .28s ease, border-width .28s ease, visibility 0s linear .28s; }
+        .nav-links.open { max-height: 220px; padding: 10px 18px 18px; border-bottom-width: 1px; opacity: 1; visibility: visible; transform: translateY(0); transition-delay: 0s; }
+        .nav-links a { padding: 13px 0; border-bottom: 1px solid var(--line); }
+        .nav-links a:last-child { border-bottom: 0; }
+        .hero { padding: 55px 0 58px; }
+        .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+        h1 { max-width: 520px; font-size: clamp(56px, 15vw, 78px); }
+        .hero-lede { max-width: 390px; font-size: 14px; }
+        .hero-art { min-height: 320px; margin: 0 5px; }
+        .art-panel { inset: 12px 0; border-bottom-right-radius: 62px; }
+        .sun { top: 60px; right: 60px; width: 135px; height: 135px; }
+        .art-panel::before { top: 28px; right: 8px; width: 235px; height: 235px; }
+        .art-panel::after { top: 55px; right: 38px; width: 175px; height: 175px; }
+        .floating-card.top { top: 28px; left: -3px; }
+        .floating-card.bottom { right: -4px; bottom: 28px; }
+        .hero-note { margin-top: 31px; }
+        .trust-inner { align-items: flex-start; flex-direction: column; padding-block: 20px; }
+        .trust-tags { gap: 8px; }
+        .trust-tags span { padding: 8px 10px; font-size: 10px; }
+        .services { padding: 72px 0; }
+        .services-top { align-items: flex-start; flex-direction: column; gap: 8px; margin-bottom: 26px; }
+        .section-copy { font-size: 13px; }
+        .service-grid { gap: 9px; }
+        .service-card { min-height: 232px; padding: 17px; }
+        .service-card h3 { font-size: 15px; }
+        .service-card p { font-size: 11px; }
+        .service-icon { margin: 18px 0 16px; }
+        .approach { padding: 72px 0; }
+        .approach-grid { grid-template-columns: 1fr; gap: 39px; }
+        .step { grid-template-columns: 34px 1fr; gap: 12px; }
+        .step h3 { font-size: 16px; }
+        .local { padding: 65px 0; }
+        .local-card { grid-template-columns: 1fr; gap: 22px; padding: 30px 24px; }
+        .local-card .section-heading { font-size: 39px; }
+        .contact { padding: 72px 0; }
+        .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+        .contact-form { gap: 12px; }
+        .field input, .field textarea, .field select { padding: 12px; }
+        .form-foot { align-items: flex-start; flex-direction: column; }
+        .footer-inner { align-items: flex-start; flex-direction: column; }
+        .footer-links { gap: 16px; }
+        .whatsapp-float { right: 16px; width: 56px; height: 56px; }
+        .whatsapp-label { display: none; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+        .switch-halo, .switch-led, .switch-power, .whatsapp-float::before { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav wrap" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="OS Technology home">
+          <span class="brand-mark" aria-hidden="true">OS</span>
+          <span>OS Technology</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          <a href="#services">IT services</a>
+          <a href="#amc">AMC support</a>
+          <a href="#industries">Industries</a>
+        </div>
+        <a class="nav-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow">IT hardware &amp; services in Nepal</div>
+            <h1>Reliable IT,<br>from hardware<br>to <span>support.</span></h1>
+            <p class="hero-lede">IT hardware, server and network solutions, business telephony, practical training, and dependable AMC support for organizations in Nepal.</p>
+            <div class="hero-actions">
+              <a class="button-primary" href="#contact">Discuss your IT needs <span class="arrow" aria-hidden="true">↗</span></a>
+              <a class="text-link" href="#services">Explore IT services <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-note"><span class="note-line"></span> Equipment, expertise, and support from one IT partner.</div>
+          </div>
+          <div class="hero-art" role="img" aria-label="Animated close-up illustration of a network switch with ethernet ports and blinking activity lights">
+            <div class="art-panel">
+              <svg class="network-visual" viewBox="0 0 600 440" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="switch-face" x1="112" y1="185" x2="492" y2="300" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#334956"/>
+                    <stop offset=".48" stop-color="#1b2c37"/>
+                    <stop offset="1" stop-color="#111e27"/>
+                  </linearGradient>
+                  <linearGradient id="switch-top" x1="119" y1="145" x2="498" y2="190" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#82949c"/>
+                    <stop offset=".5" stop-color="#526771"/>
+                    <stop offset="1" stop-color="#354c58"/>
+                  </linearGradient>
+                  <filter id="led-glow" x="-150%" y="-150%" width="400%" height="400%">
+                    <feGaussianBlur stdDeviation="2" result="blur"/>
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                </defs>
+                <circle class="switch-halo" cx="300" cy="221" r="187"/>
+                <ellipse class="switch-shadow" cx="300" cy="319" rx="198" ry="25"/>
+                <g transform="translate(-54 -40) scale(1.18)">
+                  <path class="switch-top" d="m88 168 39-35h373l-38 35z"/>
+                  <path class="switch-side" d="m462 168 38-35v133l-38 36z"/>
+                  <path class="switch-chassis" d="M88 168h374v134H88z"/>
+                  <path class="switch-edge" d="M94 173h362v123H94z"/>
+                  <path class="switch-edge" d="m95 163 34-30h361"/>
+                  <path class="switch-edge" d="m467 173 27-26v119"/>
+                  <path d="M101 181h348" stroke="#c3d0d5" stroke-opacity=".22"/>
+                  <path d="M101 289h348" stroke="#020a0f" stroke-opacity=".75" stroke-width="2"/>
+
+                  <path class="switch-side" d="m71 168 17 4v125l-17-4z"/>
+                  <path class="switch-side" d="m462 168 18 2v126l-18 6z"/>
+                  <circle class="switch-screw" cx="80" cy="184" r="3"/>
+                  <circle class="switch-screw" cx="80" cy="278" r="3"/>
+                  <circle class="switch-screw" cx="472" cy="184" r="3"/>
+                  <circle class="switch-screw" cx="472" cy="278" r="3"/>
+                  <path d="m79 182 3 3m-3 0 3-3m387 0 3 3m-3 0 3-3m-387 94 3 3m-3 0 3-3m387 0 3 3m-3 0 3-3" stroke="#9eafb7" stroke-width=".8"/>
+
+                  <text class="switch-label" x="105" y="197">OS TECHNOLOGY</text>
+                  <text class="switch-model" x="105" y="208">MANAGED GIGABIT SWITCH</text>
+                  <circle class="switch-power" cx="112" cy="226" r="3.5"/>
+                  <text class="switch-model" x="121" y="228">PWR</text>
+                  <circle class="switch-led orange" cx="112" cy="241" r="2.5"/>
+                  <text class="switch-model" x="121" y="243">SYS</text>
+                  <path d="M105 257h43m-43 5h35m-35 5h39" stroke="#738791" stroke-linecap="round" stroke-width="1"/>
+
+                  <text class="switch-model" x="164" y="199">LINK / ACT</text>
+                  <circle class="switch-led" cx="173" cy="207" r="2"/>
+                  <circle class="switch-led orange dim" cx="195" cy="207" r="2"/>
+                  <circle class="switch-led dim" cx="217" cy="207" r="2"/>
+                  <circle class="switch-led orange" cx="239" cy="207" r="2"/>
+                  <circle class="switch-led dim" cx="261" cy="207" r="2"/>
+                  <circle class="switch-led" cx="283" cy="207" r="2"/>
+                  <circle class="switch-led orange dim" cx="305" cy="207" r="2"/>
+                  <circle class="switch-led" cx="327" cy="207" r="2"/>
+                  <circle class="switch-led dim" cx="349" cy="207" r="2"/>
+                  <circle class="switch-led orange" cx="371" cy="207" r="2"/>
+                  <circle class="switch-led dim" cx="393" cy="207" r="2"/>
+                  <circle class="switch-led" cx="415" cy="207" r="2"/>
+
+                  <g aria-label="Twelve ethernet ports">
+                    <g transform="translate(164 213)"><rect class="switch-port-frame" width="18" height="29" rx="2"/><rect class="switch-port-inner" x="3" y="4" width="12" height="20" rx="1"/><path class="switch-pin" d="M5 5h2v3H5zm4 0h2v3H9z"/></g>
+                    <g transform="translate(186 213)"><rect class="switch-port-frame" width="18" height="29" rx="2"/><rect class="switch-port-inner" x="3" y="4" width="12" height="20" rx="1"/><path class="switch-pin" d="M5 5h2v3H5zm4 0h2v3H9z"/></g>
+                    <g transform="translate(208 213)"><rect class="switch-port-frame" width="18" height="29" rx="2"/><rect class="switch-port-inner" x="3" y="4" width="12" height="20" rx="1"/><path class="switch-pin" d="M5 5h2v3H5zm4 0h2v3H9z"/></g>
+                    <g transform="translate(230 213)"><rect class="switch-port-frame" width="18" height="29" rx="2"/><rect class="switch-port-inner" x="3" y="4" width="12" height="20" rx="1"/><path class="switch-pin" d="M5 5h2v3H5zm4 0h2v3H9z"/></g>
+                    <g transform="translate(252 213)"><rect class="switch-port-frame" width="18" height="29" rx="2"/><rect class="switch-port-inner" x="3" y="4" width="12" height="20" rx="1"/><path class="switch-pin" d="M5 5h2v3H5zm4 0h2v3H9z"/></g>
+                    <g transform="translate(274 213)"><rect class="switch-port-frame" width="18" height="29" rx="2"/><rect class="switch-port-inner" x="3" y="4" width="12" height="20" rx="1"/><path class="switch-pin" d="M5 5h2v3H5zm4 0h2v3H9z"/></g>
+                    <g transform="translate(296 213)"><rect class="switch-port-frame" width="18" height="29" rx="2"/><rect class="switch-port-inner" x="3" y="4" width="12" height="20" rx="1"/><path class="switch-pin" d="M5 5h2v3H5zm4 0h2v3H9z"/></g>
+                    <g transform="translate(318 213)"><rect class="switch-port-frame" width="18" height="29" rx="2"/><rect class="switch-port-inner" x="3" y="4" width="12" height="20" rx="1"/><path class="switch-pin" d="M5 5h2v3H5zm4 0h2v3H9z"/></g>
+                    <g transform="translate(340 213)"><rect class="switch-port-frame" width="18" height="29" rx="2"/><rect class="switch-port-inner" x="3" y="4" width="12" height="20" rx="1"/><path class="switch-pin" d="M5 5h2v3H5zm4 0h2v3H9z"/></g>
+                    <g transform="translate(362 213)"><rect class="switch-port-frame" width="18" height="29" rx="2"/><rect class="switch-port-inner" x="3" y="4" width="12" height="20" rx="1"/><path class="switch-pin" d="M5 5h2v3H5zm4 0h2v3H9z"/></g>
+                    <g transform="translate(384 213)"><rect class="switch-port-frame" width="18" height="29" rx="2"/><rect class="switch-port-inner" x="3" y="4" width="12" height="20" rx="1"/><path class="switch-pin" d="M5 5h2v3H5zm4 0h2v3H9z"/></g>
+                    <g transform="translate(406 213)"><rect class="switch-port-frame" width="18" height="29" rx="2"/><rect class="switch-port-inner" x="3" y="4" width="12" height="20" rx="1"/><path class="switch-pin" d="M5 5h2v3H5zm4 0h2v3H9z"/></g>
+                    <text class="switch-model" x="164" y="252">01</text>
+                    <text class="switch-model" x="186" y="252">02</text>
+                    <text class="switch-model" x="208" y="252">03</text>
+                    <text class="switch-model" x="230" y="252">04</text>
+                    <text class="switch-model" x="252" y="252">05</text>
+                    <text class="switch-model" x="274" y="252">06</text>
+                    <text class="switch-model" x="296" y="252">07</text>
+                    <text class="switch-model" x="318" y="252">08</text>
+                    <text class="switch-model" x="340" y="252">09</text>
+                    <text class="switch-model" x="362" y="252">10</text>
+                    <text class="switch-model" x="384" y="252">11</text>
+                    <text class="switch-model" x="406" y="252">12</text>
+                  </g>
+
+                  <text class="switch-model" x="432" y="199">SFP</text>
+                  <rect class="switch-port-frame" x="432" y="213" width="20" height="20" rx="2"/>
+                  <rect class="switch-port-inner" x="436" y="218" width="12" height="10" rx="1"/>
+                  <rect class="switch-port-frame" x="455" y="213" width="20" height="20" rx="2"/>
+                  <rect class="switch-port-inner" x="459" y="218" width="12" height="10" rx="1"/>
+                  <circle class="switch-led orange" cx="436" cy="240" r="2"/>
+                  <circle class="switch-led dim" cx="446" cy="240" r="2"/>
+                  <circle class="switch-led" cx="459" cy="240" r="2"/>
+                  <circle class="switch-led orange dim" cx="469" cy="240" r="2"/>
+                  <path class="switch-vent" d="M433 255h4v23h-4zm8 0h4v23h-4zm8 0h4v23h-4zm8 0h4v23h-4zm8 0h4v23h-4z"/>
+                  <path d="M432 286h44" stroke="#f47920" stroke-linecap="round" stroke-width="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="floating-card top">
+              <span class="card-icon" aria-hidden="true">✳</span>
+              <span><strong>Infrastructure ready</strong><small>Servers &amp; network solutions</small></span>
+            </div>
+            <div class="floating-card bottom">
+              <span class="card-icon" aria-hidden="true">↗</span>
+              <span><strong>Ongoing IT care</strong><small>AMC for your operations</small></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="trust-strip" aria-label="Areas of expertise">
+        <div class="wrap trust-inner">
+          <span class="trust-title">IT supply, implementation &amp; support</span>
+          <div class="trust-tags">
+            <span>IT hardware</span><span>Servers &amp; networks</span><span>Telephony</span><span>AMC support</span>
+          </div>
+        </div>
+      </div>
+
+      <section class="services" id="services">
+        <div class="wrap">
+          <div class="services-top">
+            <div>
+              <div class="eyebrow">IT products &amp; services</div>
+              <h2 class="section-heading">Practical IT solutions, from supply to support.</h2>
+            </div>
+            <p class="section-copy">Source the equipment you need, configure it for your environment, and keep it working with practical ongoing support.</p>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <span class="service-number">01 / HARDWARE</span>
+              <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19.5V4.8h16v14.7zM8 15l2.5-3 2 1.5 3.5-5M8 8h.01"/></svg></span>
+              <h3>IT hardware supply</h3>
+              <p>IT equipment for business needs, including servers, computers, networking products, and related infrastructure. Product selection is based on your requirements.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-number">02 / SERVERS &amp; NETWORKS</span>
+              <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4m8-8 4 4-4 4m-3-11-2 14"/></svg></span>
+              <h3>Server &amp; network solutions</h3>
+              <p>Server installation and configuration, network planning, and setup of wired and wireless business infrastructure.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-number">03 / TELEPHONY</span>
+              <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8m-4-4v4m-5-9 3-3 2 2 4-4"/></svg></span>
+              <h3>Business telephony</h3>
+              <p>Telephony solutions planned around your organization's communication needs, with installation and configuration support.</p>
+            </article>
+            <article class="service-card">
+              <span class="service-number">04 / TRAINING</span>
+              <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.6 2.9 8.3 7 10 4.1-1.7 7-5.4 7-10V6zm-3 9 2 2 4-4"/></svg></span>
+              <h3>Technical training</h3>
+              <p>Practical, hands-on training in server setup and configuration, network planning, and telephony systems.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="approach" id="amc">
+        <div class="wrap approach-grid">
+          <div>
+            <div class="eyebrow">Annual maintenance contracts</div>
+            <h2 class="section-heading">Dependable IT support for day-to-day operations.</h2>
+            <p class="section-copy">An AMC gives your organization an agreed plan for IT maintenance and service. Tell us about your equipment, sites, and support needs so we can discuss a suitable scope.</p>
+            <a class="approach-link" href="#contact">Discuss an AMC for your organization <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <span class="step-number">01</span>
+              <div><h3>Understand your environment</h3><p>Review the equipment, locations, users, and support requirements you want covered.</p></div>
+            </article>
+            <article class="step">
+              <span class="step-number">02</span>
+              <div><h3>Agree the service scope</h3><p>Define covered systems, maintenance activities, service arrangements, and commercial terms.</p></div>
+            </article>
+            <article class="step">
+              <span class="step-number">03</span>
+              <div><h3>Maintain and troubleshoot</h3><p>Receive the agreed maintenance and technical support for the systems in your contract.</p></div>
+            </article>
+            <article class="step">
+              <span class="step-number">04</span>
+              <div><h3>Review as needs change</h3><p>Discuss changes in equipment, sites, or operations when your organization needs evolve.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="local" id="industries">
+        <div class="wrap local-card">
+          <div>
+            <div class="eyebrow">Supporting organizations in Nepal</div>
+            <h2 class="section-heading">IT support shaped around your sector.</h2>
+            <p class="section-copy">Healthcare, hospitality, and commercial organizations rely on technology to serve people and run their operations. We provide IT hardware, infrastructure services, training, and AMC support to clients in these sectors.</p>
+          </div>
+          <div class="local-points">
+            <div class="local-point"><span class="check" aria-hidden="true">✓</span> Healthcare organizations &amp; clinics</div>
+            <div class="local-point"><span class="check" aria-hidden="true">✓</span> Hotels &amp; hospitality businesses</div>
+            <div class="local-point"><span class="check" aria-hidden="true">✓</span> Commercial businesses &amp; offices</div>
+            <div class="local-point"><span class="check" aria-hidden="true">✓</span> Training for IT teams and professionals</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="wrap contact-grid">
+          <div>
+            <div class="eyebrow">Talk to OS Technology</div>
+            <h2 class="section-heading">Tell us what your IT setup needs.</h2>
+            <p class="section-copy">Request a hardware quote, discuss a network or telephony project, ask about training, or tell us what you need from an AMC.</p>
+            <div class="contact-detail"><span class="dot"></span> Enquiries are received by OS Technology’s enquiry service.</div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" autocomplete="name" maxlength="100" placeholder="How should we address you?" required>
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="you@company.com" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="30" placeholder="+977">
+            </div>
+            <div class="field">
+              <label for="organization">Organization (optional)</label>
+              <input id="organization" name="organization" autocomplete="organization" maxlength="150" placeholder="Company or institution">
+            </div>
+            <div class="field full">
+              <label for="sector">Your sector</label>
+              <select id="sector" name="sector" required>
+                <option value="" disabled selected>Select your sector</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Hospitality">Hospitality</option>
+                <option value="Commercial">Commercial business</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="service">What do you need?</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="IT hardware sales">IT hardware sales or quotation</option>
+                <option value="Server setup and configuration">Server setup and configuration</option>
+                <option value="Network planning and solutions">Network planning or solutions</option>
+                <option value="Telephony solutions">Business telephony solution</option>
+                <option value="Technical training">Technical training</option>
+                <option value="Annual maintenance contract">Annual maintenance contract (AMC)</option>
+                <option value="Other IT services">Other IT service</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="message">How can we help?</label>
+              <textarea id="message" name="message" minlength="20" maxlength="4000" placeholder="Describe the equipment, service, or support you need." required></textarea>
+            </div>
+            <div class="field full" aria-hidden="true" style="position:absolute;left:-10000px">
+              <label for="website">Leave this field empty</label>
+              <input id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="form-foot">
+              <small>Your details will be used to respond to this enquiry. Please do not include passwords or sensitive health information.</small>
+              <button class="form-submit" type="submit">Send enquiry <span aria-hidden="true">↗</span></button>
+            </div>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">OS</span><span>OS Technology</span></a>
+        <p>IT hardware, network solutions &amp; support in Nepal.</p>
+        <div class="footer-links"><a href="#services">IT services</a><a href="#amc">AMC</a><a href="#contact">Contact</a></div>
+      </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/9779851249483?text=Namaste%20OS%20Technology%2C%20I%20would%20like%20to%20ask%20about%20your%20IT%20services." target="_blank" rel="noopener noreferrer" aria-label="Chat with OS Technology on WhatsApp (opens in a new tab)">
+      <span class="whatsapp-label" aria-hidden="true">Chat with us</span>
+      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M26.2 5.7A14.3 14.3 0 0 0 3.7 22.9L2 30l7.3-1.9A14.3 14.3 0 0 0 26.2 5.7Z" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.2 9.2c-.4-.8-.8-.8-1.2-.8h-1c-.4 0-.9.2-1.3.6-.4.5-1.7 1.7-1.7 4.1s1.8 4.7 2 5c.3.3 3.5 5.5 8.6 7.5 4.3 1.7 5.2 1.4 6.1 1.3.9-.1 2.8-1.1 3.2-2.2.4-1.1.4-2 .3-2.2-.2-.2-.5-.4-1-.7l-3.1-1.5c-.4-.2-.7-.3-1 .2-.3.4-1.2 1.5-1.5 1.8-.3.3-.5.3-1 .1-.4-.2-1.9-.7-3.7-2.2-1.4-1.2-2.3-2.7-2.6-3.2-.3-.5 0-.7.2-.9l.7-.8.5-.8c.2-.3.1-.6 0-.8l-1.5-3.5Z" fill="currentColor" transform="translate(2 0) scale(.86)"/>
+      </svg>
+    </a>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      const setMenuOpen = (isOpen) => {
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+        navLinks.classList.toggle("open", isOpen);
+      };
+
+      menuToggle.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        setMenuOpen(!isOpen);
+      });
+
+      navLinks.addEventListener("click", (event) => {
+        if (event.target.closest("a")) {
+          setMenuOpen(false);
+        }
+      });
+
+      document.querySelector("#contact-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const status = document.querySelector("#form-status");
+        const submit = form.querySelector(".form-submit");
+        const originalLabel = submit.innerHTML;
+        status.textContent = "";
+        submit.disabled = true;
+        submit.textContent = "Sending…";
+
+        fetch("/api/enquiries", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(Object.fromEntries(new FormData(form)))
+        })
+          .then(async (response) => {
+            const result = await response.json();
+            if (!response.ok) throw new Error(result.error || "We could not send your enquiry. Please try again.");
+            status.textContent = "Thank you. Your enquiry has been received.";
+            form.reset();
+          })
+          .catch((error) => {
+            status.textContent = error.message || "We could not send your enquiry. Please try again.";
+          })
+          .finally(() => {
+            submit.disabled = false;
+            submit.innerHTML = originalLabel;
+          });
+      });
+    </script>
+  </body>
+</html>
